@@ -37,12 +37,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18T2"/>
+
             <TextView
                 android:id="@+id/tv_phone"
-                android:layout_marginLeft="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0348482493"/>
+                android:layout_marginLeft="50dp"
+                android:text="0348482493" />
         </LinearLayout>
         <TextView
             android:id="@+id/tv_email"

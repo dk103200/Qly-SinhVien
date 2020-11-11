@@ -24,7 +24,7 @@
             android:textSize="18sp"/>
         <EditText
             android:id="@+id/txt_id"
-            android:clickable="false"
+            android:enabled="false"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -129,11 +129,13 @@
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btn_edit"
+            android:enabled="false"
             android:text="Sửa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <Button
+            android:enabled="false"
             android:id="@+id/btn_del"
             android:text="Xóa"
             android:layout_width="match_parent"
@@ -150,7 +152,7 @@
         android:layout_gravity="center"/>
     <ListView
         android:id="@+id/lv_students"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
 

@@ -54,8 +54,9 @@ public class DBManager extends SQLiteOpenHelper {
         values.put(EMAIL,st.getemail());
 
         db.insert(TABLE_NAME,null,values);
+        Log.d(TAG,values.toString());
         db.close();
-        Log.d(TAG,"add Successfuly");
+
 
     }
     public List<Student> getAll(){
@@ -79,11 +80,20 @@ public class DBManager extends SQLiteOpenHelper {
         return listStudent;
     }
 
+    public int editStudent(Student st){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(NAME, st.getName());
+        values.put(CLASS,st.getlop());
+        values.put(PHONE,st.getPhone());
+        values.put(EMAIL,st.getemail());
 
+        return db.update(TABLE_NAME,values,ID + "=?", new String[]{String.valueOf(st.getId())});
 
+    }
 
-
-
-
-
+    public int delStudent(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME,ID+"=?", new String[]{String.valueOf(id)});
+    }
 }
